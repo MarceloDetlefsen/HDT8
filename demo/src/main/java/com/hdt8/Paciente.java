@@ -1,10 +1,9 @@
 package com.hdt8;
 
-public class Paciente {
-    private String nombre, sintoma;
-    private char emergencia;
+public class Paciente implements Comparable<Paciente> {
+    private String nombre, sintoma, emergencia;
 
-    public Paciente(String nombre, String sintoma, char emergencia) {
+    public Paciente(String nombre, String sintoma, String emergencia) {
         this.nombre = nombre;
         this.sintoma = sintoma;
         this.emergencia = emergencia;
@@ -26,12 +25,17 @@ public class Paciente {
         this.sintoma = sintoma;
     }
 
-    public char getEmergencia() {
+    public String getEmergencia() {
         return emergencia;
     }
 
-    public void setEmergencia(char emergencia) {
+    public void setEmergencia(String emergencia) {
         this.emergencia = emergencia;
+    }
+
+    @Override
+    public int compareTo(Paciente paciente) {
+        return this.emergencia.compareTo(paciente.getEmergencia());
     }
 
 }
