@@ -27,5 +27,10 @@ public class SimulacionJava {
             } catch (IOException e) {
                 System.err.println("Error al leer el archivo: " + e.getMessage());
             }
+
+            while (sala.isEmpty() == false){
+                System.out.println("Paciente tratado");
+                System.out.println(sala.poll());
+            }
     }
 }
