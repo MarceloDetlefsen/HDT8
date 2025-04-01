@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.PriorityQueue;
+import java.util.Scanner;
 
 /*
  * Universidad del Valle de Guatemala
@@ -16,12 +16,35 @@ import java.util.PriorityQueue;
  * Descripción: Simulación de una sala de emergencias con cola de prioridad implementando VectorHeap
  */
 
-public class SimulacionJavaPriorityQueue {
+public class Simulacion {
     public static void main(String[] args) {
-        PriorityQueue<Paciente> sala = new PriorityQueue<Paciente>();
         String archivoTXT = "pacientes.txt";
+        Scanner scanner = new Scanner(System.in);
+        boolean revision = true;
+        String implementacion = null;
+        int opcion;
+        while (revision){
+            System.out.println("Ingrese el numero de la implementacion que desea utilizar");
+            System.out.println("1. Vector Heap");
+            System.out.println("2. Priority Queue JCF");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+            if (opcion == 1){
+                implementacion = "Vector Heap";
+                revision = false;
+            }
+            else if (opcion == 2){
+                implementacion = "PriorityQueue";
+                revision = false;
+            }
+            else {
+                System.out.println("Ingrese una opcion valida");
+            }
+        }
+        scanner.close();
 
-        InputStream inputStream = SimulacionJavaPriorityQueue.class.getClassLoader().getResourceAsStream(archivoTXT);
+        PriorityQueue<Paciente> sala = PriorityQueueFactory.getPriorityQueue(implementacion);
+        InputStream inputStream = Simulacion.class.getClassLoader().getResourceAsStream(archivoTXT);
 
         if (inputStream == null) {
             System.err.println("Error: No se pudo encontrar el archivo 'pacientes.txt' en resources.");

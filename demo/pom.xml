@@ -69,9 +69,16 @@
             </configuration>
         </plugin>
         <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.13.0</version>
-        </plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>17</release>
+          <verbose>true</verbose>
+          <fork>true</fork>
+          <executable>${JAVA_HOME_17}/bin/javac</executable>
+        </configuration>
+      </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.3.0</version>

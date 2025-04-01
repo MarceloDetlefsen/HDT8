@@ -1,4 +1,5 @@
 package com.hdt8;
+
 /*
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de Datos
@@ -13,12 +14,14 @@ package com.hdt8;
 public class Paciente implements Comparable<Paciente> {
     private String nombre, sintoma, emergencia;
 
+    //Constructor correspondiente
     public Paciente(String nombre, String sintoma, String emergencia) {
         this.nombre = nombre;
         this.sintoma = sintoma;
         this.emergencia = emergencia;
     }
 
+    //Getters y Setters
     public String getNombre() {
         return nombre;
     }
