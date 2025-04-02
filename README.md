@@ -41,9 +41,34 @@ Implementación de un sistema de atención de pacientes en emergencias hospitala
     python SimuladorHospital.py
     ```
 
-# Análisis de los Resultados Simpy
-...
+# Explicación de los Términos en la Simulación
+   - **Configuración 1 / Básica:** Enfermeras = 1, Doctores = 2, Rayos X = 1, Laboratorios = 1.
+   - **Configuración 2 / Intermedio:** Enfermeras = 2, Doctores = 3, Rayos X = 1, Laboratorios = 1.
+   - **Configuración 3 / Avanzado:** Enfermeras = 3, Doctores = 5, Rayos X = 2, Laboratorios = 2.
+   - **Configuración 4 / Fin de Semana:** Enfermeras = 2, Doctores = 4, Rayos X = 1, Laboratorios = 1, Intervalo de Llegada = 3.
+   - **Configuración 5 / Feriado:** Enfermeras = 2, Doctores = 4, Rayos X = 1, Laboratorios = 1, Intervalo de Llegada = 1.5, Tiempo de Simulación = 600.
 
+*El intervalo de llegada representa el tiempo promedio entre la llegada de pacientes al hospital, el estándar establecido es cada 5 minutos.
+
+*El tiempo de simulación representa la duración total de la simulaciín en minutos, el valor estándar es 480 lo cual representa 8 horas.
+
+# Resultados Simpy
+![alt text](PA.jpg)
+
+![alt text](TP.jpg)
+
+![alt text](CT.jpg)
+
+![alt text](CP.jpg)
+
+![alt text](EP.jpg)
+
+![alt text](CTvsPA.jpg)
+
+![alt text](AITP.jpg)
+
+# Análisis de los Resultados
+La mejor decisión entre las cinco configuraciones evaluadas es la Configuración 3. Aunque presenta un costo total elevado (GTQ 10,800.00), ofrece la mejor eficiencia con 7.38 pacientes atendidos por hora y el menor tiempo promedio de atención general (100.72 minutos) con la desviación estándar más baja (61.88 minutos), lo cual indica un servicio más consistente y predecible. Además, distribuye adecuadamente la atención entre diferentes prioridades, especialmente aquellas más críticas (Prioridades 1 y 2). Aunque su costo por paciente (GTQ 183.05) no es el más bajo, es razonable considerando la alta eficiencia lograda.
 
 # Investigación
 Esta simulación se basa en datos disponibles sobre el sistema de salud de Guatemala para intentar reflejar condiciones realistas en una sala de emergencias. Debido a la limitada disponibilidad de datos específicos para todos los parámetros, se utilizaron las mejores estimaciones disponibles de diversas fuentes.
