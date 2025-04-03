@@ -53,6 +53,10 @@ Implementación de un sistema de atención de pacientes en emergencias hospitala
 *El tiempo de simulación representa la duración total de la simulaciín en minutos, el valor estándar es 480 lo cual representa 8 horas.
 
 # Resultados Simpy
+(*Las siguientes gráficas cuentan con la configuración en el eje X, y el apartado del título en el eje Y.)
+
+![alt text](T1.jpg) 
+
 ![alt text](PA.jpg)
 
 ![alt text](TP.jpg)
@@ -64,6 +68,8 @@ Implementación de un sistema de atención de pacientes en emergencias hospitala
 ![alt text](EP.jpg)
 
 ![alt text](CTvsPA.jpg)
+
+![alt text](T2.jpg)
 
 ![alt text](AITP.jpg)
 
