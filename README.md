@@ -32,7 +32,7 @@ Implementación de un sistema de atención de pacientes en emergencias hospitala
 3. Ejecutar la parte 1:
     ```bash
     cd out
-    java com.hdt8.SimulacionJava
+    java com.hdt8.Simulacion
     ```
 
 4. Ejecutar la parte 2:
@@ -40,6 +40,8 @@ Implementación de un sistema de atención de pacientes en emergencias hospitala
     cd out
     python SimuladorHospital.py
     ```
+# Explicación Simulación en Java
+*La simulación en Java se lleva a cabo de dos maneras, implementando un VectorHeap para manejar las colas de las salas de emergencia con una cola de prioridad basadas en heap y utilizando la propia PriorityQueue del JCF. Sin embargo, debido a la definición del comportamiento del método remove() en la interface PriorityQueue, fue necesario crear una WrapperClass llamada PriorityQueuePropio.java, en la cual se modifica este método con el método propio de las PriorityQueue poll(), el cual si tiene el comportamiento esperado del método remove() de la interface. Para implementar ambas versiones se utiliza el patrón de diseño Factory que decide si usar la WrapperClass de PriorityQueue o la implementación propia de VectorHeap.
 
 # Explicación de los Términos en la Simulación
    - **Configuración 1 / Básica:** Enfermeras = 1, Doctores = 2, Rayos X = 1, Laboratorios = 1.
